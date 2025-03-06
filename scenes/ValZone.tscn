@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmopnn5s38grm"]
+
+[ext_resource type="Script" path="res://scenes/SignalArea.gd" id="1_7fwyq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_na7oo"]
+size = Vector2(239, 377)
+
+[node name="ValZone" type="Area2D"]
+script = ExtResource("1_7fwyq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -85)
+shape = SubResource("RectangleShape2D_na7oo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
