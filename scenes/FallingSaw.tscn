@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dedqxmdm4d460"]
+
+[ext_resource type="Texture2D" uid="uid://dn0jnesccx37g" path="res://assets/kenney_platformerpack/PNG/Tiles/weight.png" id="1_64b5r"]
+[ext_resource type="Script" path="res://scenes/Dead.gd" id="1_sii5o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ru401"]
+size = Vector2(116, 112)
+
+[node name="FallingSaw" type="RigidBody2D"]
+script = ExtResource("1_sii5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_64b5r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 9)
+shape = SubResource("RectangleShape2D_ru401")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

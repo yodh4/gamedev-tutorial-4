@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce34mpgp8lidy"]
+
+[ext_resource type="Script" path="res://scenes/Dead.gd" id="1_g6iec"]
+[ext_resource type="Texture2D" uid="uid://dvp0jyp34826e" path="res://assets/kenney_platformerpack/PNG/Items/coinGold.png" id="1_vugih"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vp1m0"]
+radius = 32.3883
+
+[node name="FallingCoin" type="RigidBody2D"]
+script = ExtResource("1_g6iec")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vugih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vp1m0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

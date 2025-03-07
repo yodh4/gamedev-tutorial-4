@@ -70,7 +70,7 @@ texture = ExtResource("3_0637o")
 
 [node name="ValZone" parent="Sprite2D" instance=ExtResource("4_f3dnf")]
 position = Vector2(-4, 170)
-sceneName = "WinScreen"
+sceneName = "Level2"
 
 [node name="level 1" type="Sprite2D" parent="."]
 
